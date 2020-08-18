@@ -12,3 +12,19 @@ __author_email__ = "skruzel@portformer.com"
 __maintainer__ = "Sean Kruzel"
 __maintainer_email__ = "support@portformer.com"
 __github_username__ = "closedLoop"
+
+# Library Functions
+__all__ = ["load_config"]
+
+# Environmental variables
+_api = "v1"
+_engine = f"api_{_api}"
+
+
+# Initialization functions
+from .config import load_config
+from .engine import set_backend
+
+
+_config = load_config()
+set_backend(engine=_config.get("engine", None))
