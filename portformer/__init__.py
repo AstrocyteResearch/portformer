@@ -20,11 +20,9 @@ __all__ = ["load_config"]
 _api = "v1"
 _engine = f"api_{_api}"
 
-
 # Initialization functions
-from .config import load_config
-from .engine import set_backend
+# from .config import load_config
+# from .engine import set_backend
 
-
-_config = load_config()
-set_backend(engine=_config.get("engine", None))
+# _config = load_config()
+# set_backend(engine=_config.get("engine", None))
