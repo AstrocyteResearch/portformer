@@ -1,3 +1,4 @@
+"""Misc Visualization libraries to assist in visualizing Breakpoint and Portformer Data"""
 import matplotlib.pyplot as plt
 import pandas as pd
 

@@ -2,7 +2,7 @@
 Portformer API and Portfolio analysis tools for the modern investor
 """
 
-__version__ = "0.0.1"
+__version__ = "1.0.0"
 __short_description__ = "Portfolios. Made Better."
 __license__ = "Astrocyte Research, Inc"
 __author__ = "Sean Kruzel, Astrocyte Research Inc."
@@ -20,12 +20,3 @@ from .breakpoint.api import BreakpointAPI
 from .config import load_config
 
 _api = "v1"
-_engine = f"api_{_api}"
-
-
-# Initialization functions
-
-# from .engine import set_backend
-
-# _config = load_config()
-# set_backend(engine=_config.get("engine", None))
