@@ -1,14 +1,5 @@
-import datetime
-import json
-import pprint
-import tempfile
-
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
-import requests
-import seaborn as sns
-import tqdm
 
 
 # %matplotlib inline
@@ -18,7 +9,7 @@ def format_rcParams():
     plt.rcParams["font.size"] = 16
 
 
-## VIZ CODE
+# VIZ CODE
 def visualize_breakpoint_metrics(metrics, fields, figsize=(24, 30), aggfn=None):
     fig = plt.figure(figsize=figsize)
     ax = None

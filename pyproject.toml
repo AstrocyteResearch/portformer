@@ -1,0 +1,20 @@
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+  | \.venv
+  | venv
+  | docs
+  | .vscode
+)/
+'''
+
+[tool.vulture]
+exclude = [".git",".vscode", "venv/"]
+ignore_decorators = ["@app.route", "@require_*"]
+make_whitelist = true
+min_confidence = 80
+sort_by_size = true
+verbose = false
