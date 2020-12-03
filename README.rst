@@ -103,3 +103,17 @@ Build
 
     $ python3 -m pip install --user --upgrade setuptools wheel
     $ python3 setup.py sdist bdist_wheel
+
+
+Deploy
+------------------------------------------------------------------------------
+
+.. code-block:: console
+
+    $ # Update coverage
+    $ coverage xml
+    $ bash <(curl -s https://codecov.io/bash)
+    $ # Build
+    $ rm ./dist/portformer-* || python3 setup.py sdist bdist_wheel
+    $ # Upload to pypi
+    $ python3 -m twine upload dist/*

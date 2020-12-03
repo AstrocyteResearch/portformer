@@ -2,7 +2,7 @@
 Portformer API and Portfolio analysis tools for the modern investor
 """
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __short_description__ = "Portfolios. Made Better."
 __license__ = "Astrocyte Research, Inc"
 __author__ = "Sean Kruzel, Astrocyte Research Inc."
