@@ -23,7 +23,7 @@ python:
   install:
     - requirements: requirements.txt
     - requirements: requirements-doc.txt
-    - method: pip
+    - method: setuptools
       path: .
       extra_requirements:
         - docs
