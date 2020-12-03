@@ -15,7 +15,7 @@ jobs:
           command: python3 -m pip install --upgrade setuptools wheel && python3 setup.py sdist bdist_wheel
           name: Build
       - run:
-          command: pip install dist/portformer-1.0.0-py3-none-any.whl
+          command: ls ./dist/portformer-*.whl | xargs pip install
           name: Install
       - run:
           command: python ./tests/all.py
