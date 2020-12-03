@@ -7,3 +7,11 @@ class PortformerError(Exception):
 
 class PortformerAPIError(PortformerError):
     """Error related to API request or response exceptions."""
+
+
+class PortformerMissingAPIKeyError(PortformerAPIError):
+    """Error related to API request or response exceptions."""
+
+
+class PortformerInvalidAPIKeyError(PortformerAPIError):
+    """Error related to API request or response exceptions."""

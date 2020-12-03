@@ -10,7 +10,11 @@ from typing import Dict, List, Union
 import pandas as pd
 import requests
 
-from ..errors import PortformerAPIError
+from ..errors import (
+    PortformerAPIError,
+    PortformerInvalidAPIKeyError,
+    PortformerMissingAPIKeyError,
+)
 
 
 class BreakpointAPI:
@@ -36,9 +40,18 @@ class BreakpointAPI:
             headers=headers,
         )
         if not r.ok:
-            raise PortformerAPIError(
-                "Error in request: {} - {}".format(r.status_code, r.content)
-            )
+            if r.status_code == 401:
+                raise PortformerInvalidAPIKeyError(
+                    "Error in request: {} - {}".format(r.status_code, r.content)
+                )
+            elif r.status_code == 403:
+                raise PortformerMissingAPIKeyError(
+                    "Error in request: {} - {}".format(r.status_code, r.content)
+                )
+            else:
+                raise PortformerAPIError(
+                    "Error in request: {} - {}".format(r.status_code, r.content)
+                )
         return json.loads(r.content)
 
     def _post_request(self, url, params, body):
