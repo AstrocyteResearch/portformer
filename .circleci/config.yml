@@ -12,7 +12,10 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          command: pip install .
+          command: python3 -m pip install --upgrade setuptools wheel && python3 setup.py sdist bdist_wheel
+          name: Build
+      - run:
+          command: pip install dist/portformer-1.0.0-py3-none-any.whl
           name: Install
       - run:
           command: python ./tests/all.py
