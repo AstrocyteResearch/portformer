@@ -1,9 +1,9 @@
 
-.. image:: https://travis-ci.org/closedLoop/portformer.svg?branch=master
-    :target: https://travis-ci.org/closedLoop/portformer?branch=master
+.. image:: https://circleci.com/gh/AstrocyteResearch/portformer/tree/master.svg?style=shield
+    :target: https://circleci.com/gh/AstrocyteResearch/portformer/tree/master
 
-.. image:: https://codecov.io/gh/closedLoop/portformer/branch/master/graph/badge.svg
-  :target: https://codecov.io/gh/closedLoop/portformer
+.. image:: https://codecov.io/gh/AstrocyteResearch/portformer/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/AstrocyteResearch/portformer
 
 .. image:: https://img.shields.io/pypi/v/portformer.svg
     :target: https://pypi.python.org/pypi/portformer
