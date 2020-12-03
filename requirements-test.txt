@@ -1,3 +1,4 @@
 # dependencies for test
-pytest==3.2.3       # test framework
-pytest-cov==2.5.1   # coverage test
+coverage==5.3
+pytest==6.1.2       # test framework
+pytest-cov==2.10.1   # coverage test
