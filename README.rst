@@ -15,7 +15,7 @@
     :target: https://pypi.python.org/pypi/portformer
 
 .. image:: https://img.shields.io/badge/STAR_Me_on_GitHub!--None.svg?style=social
-    :target: https://github.com/closedLoop/portformer
+    :target: https://github.com/AstrocyteResearch/portformer
 
 ------
 
@@ -24,23 +24,24 @@
       :target: `install`_
 
 .. image:: https://img.shields.io/badge/Link-GitHub-blue.svg
-      :target: https://github.com/closedLoop/portformer
+      :target: https://github.com/AstrocyteResearch/portformer
 
 .. image:: https://img.shields.io/badge/Link-Submit_Issue-blue.svg
-      :target: https://github.com/closedLoop/portformer/issues
+      :target: https://github.com/AstrocyteResearch/portformer/issues
 
 .. image:: https://img.shields.io/badge/Link-Request_Feature-blue.svg
-      :target: https://github.com/closedLoop/portformer/issues
+      :target: https://github.com/AstrocyteResearch/portformer/issues
 
 .. image:: https://img.shields.io/badge/Link-Download-blue.svg
       :target: https://pypi.org/pypi/portformer#files
 
 
-Welcome to ``portformer`` Documentation
+Portformer: Portfolios. Made Better.
 ==============================================================================
+Welcome to the documentation for the wrapper for of Portformer's API https://analysis.portformer.com/docs
 
-Documentation for ``portformer``.
 
+This is a product of Portformer by Astrocyte Research
 
 .. _install:
 
@@ -60,63 +61,45 @@ To upgrade to latest version:
     $ pip install --upgrade portformer
 
 
-# portformer
-Portfolios. Made Better.
+Usage
+------------------------------------------------------------------------------
 
-A wrapper for portformer API https://analysis.portformer.com
+.. code-block:: python3
 
+    from portformer import BreakpointAPI
+    api = BreakpointAPI(api_key="ENTER_YOUR_KEY")
 
-# Install
-
-```
-pip install portformer
-```
-
-
-# Usage
-
-```
-from portformer import Backtest
-
-bt = Backtest(API_KEY='XXXXX', run_local=False)
-
-spec = bt.make_spec(weights=wt)
-results = bt.run(spec)
-bt.tearsheet(results)
-```
-
-# Development
-
-```
-# create venv
-make -f make/python_env.mk up
-
-# Install
-make -f make/python_env.mk install
-
-```
-
-# Build
-
-```
-python3 -m pip install --user --upgrade setuptools wheel
-python3 setup.py sdist bdist_wheel
-```
-
-This should generate
-
-```
-dist/
-  example_pkg_YOUR_USERNAME_HERE-0.0.1-py3-none-any.whl
-  example_pkg_YOUR_USERNAME_HERE-0.0.1.tar.gz
-```
-
-# Deplo
+    # Get the latest breakpoint risks and forecasts for TSLA
+    breakpoint_forecast = api.forecast("TSLA")
 
 
-pip install . # install your library and dependencies
-pip install pytest
-mkdir tests # write some test
-pip install sphinx
-sphinx-quickstart # initiate doc
-vim docs/source/conf.py # configure your doc settings
+Development
+------------------------------------------------------------------------------
+
+.. code-block:: console
+
+    $ # create venv
+    $ virtualenv -p python3.8 venv
+
+    $ # Install
+    $ pip install -r requirements.txt
+    $ pip install -r requirements-dev.txt
+    $ pip install -e .
+
+
+Test
+------------------------------------------------------------------------------
+
+.. code-block:: console
+
+    $ python ./tests/all.py
+
+
+
+Build
+------------------------------------------------------------------------------
+
+.. code-block:: console
+
+    $ python3 -m pip install --user --upgrade setuptools wheel
+    $ python3 setup.py sdist bdist_wheel
