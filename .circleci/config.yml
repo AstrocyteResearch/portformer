@@ -18,10 +18,10 @@ jobs:
           command: ls ./dist/portformer-*.whl | xargs pip install
           name: Install
       - run:
-          command: coverage erase && coverage run -m pytest -s --tb=native
+          command: python -m coverage erase && python -m coverage run -m pytest -s --tb=native
           name: Test
       - run:
-          command: coverage xml && bash <(curl -s https://codecov.io/bash)
+          command: python -m coverage xml && bash <(curl -s https://codecov.io/bash)
           name: Update code coverage
 workflows:
   main:
