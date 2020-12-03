@@ -2,7 +2,7 @@
 .. image:: https://circleci.com/gh/AstrocyteResearch/portformer/tree/master.svg?style=shield
     :target: https://circleci.com/gh/AstrocyteResearch/portformer/tree/master
 
-.. image:: https://codecov.io/gh/AstrocyteResearch/portformer/branch/master/graph/badge.svg
+.. image:: https://codecov.io/gh/AstrocyteResearch/portformer/branch/master/graph/badge.svg?token=6NVZUGMEZ8
   :target: https://codecov.io/gh/AstrocyteResearch/portformer
 
 .. image:: https://img.shields.io/pypi/v/portformer.svg
