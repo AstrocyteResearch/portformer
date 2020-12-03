@@ -6,5 +6,5 @@
 include *.txt
 include *.rst
 recursive-include portformer *.*
-recursive-exclude *.pyc
-recursive-exclude *.pyo
+recursive-exclude portformer *.pyc
+recursive-exclude portformer *.pyo
