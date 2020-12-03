@@ -12,6 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
+          command: pip install .
+          name: Install
+      - run:
           command: python ./tests/all.py
           name: Test
 
